@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #fffaf0;
+}
+
+/* ---------------- HEADER ---------------- */
+.top-banner {
+    background: linear-gradient(to bottom, rgb(255, 106, 0), white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: nowrap;
+}
+
+.top-banner h1 {
+    color: #8B4513;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.side-img {
+    width: 150px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid orange;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+.temple-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.temple-img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.temple-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.golden-frame {
+    background-color: #DAA520;
+    padding: 20px;
+    border: 0.2cm solid #8B4513;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.temple-text h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ---------------- FOOTER ---------------- */
+.mountain-range-footer {
+    background-image: url('mount.png');
+    background-size: cover;
+    background-position: center;
+    height: 210px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hanumanji-container {
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    animation: hanumanji-marquee 10s ease-in-out infinite;
+}
+
+.hanumanji-image {
+    width: 150px;
+    height: auto;
+}
+
+.footer p {
+    color: #8B4513;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #FF4500;
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .top-banner h1 {
+        font-size: 2rem;
+    }
+
+    .side-img {
+        width: 110px;
+        height: auto;
+    }
+
+    .temple-section {
+        flex-direction: column;
+    }
+
+    .temple-img {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .top-banner h1 {
+        font-size: 1.4rem;
+    }
+
+    .side-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .temple-img {
+        width: 100%;
+    }
+
+    .temple-text p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes hanumanji-marquee {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(1000%); }
+}
